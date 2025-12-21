@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "deploy:sepolia": "hardhat ignition deploy ./ignition/modules/Voucher.ts --network sepolia",
+    "deploy-helper:sepolia": "hardhat ignition deploy ./ignition/modules/VoucherHelper.ts --network sepolia",
+    "deploy-mynft:sepolia": "hardhat ignition deploy ./ignition/modules/MyNFT.ts --network sepolia",
     "deploy:localhost": "hardhat ignition deploy ./ignition/modules/Voucher.ts --network localhost",
     "verify:sepolia": "hardhat verify --network sepolia 0x6c0d28Fc03fB459603AbF076E5810a8E414a57f2 0xD4fb7c59EB8d5Cf45BB9cA4112c3Aa1c4e852997 0x10C274E66c5d92693b82DEf84B8617F7FE838460",
     "test": "hardhat test",
