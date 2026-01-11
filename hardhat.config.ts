@@ -1,4 +1,4 @@
-import HardhatIgnitionEthersPlugin from "@nomicfoundation/hardhat-ignition-ethers";
+import "@nomicfoundation/hardhat-toolbox-viem";
 import { configVariable, defineConfig } from "hardhat/config";
 import { config as dotenvConfig } from "dotenv";
 import { fileURLToPath } from "url";
@@ -10,7 +10,6 @@ const __dirname = dirname(__filename);
 dotenvConfig({ path: resolve(__dirname, ".env") });
 
 export default defineConfig({
-  plugins: [HardhatIgnitionEthersPlugin],
   solidity: {
     profiles: {
       default: {
@@ -25,6 +24,11 @@ export default defineConfig({
           },
         },
       },
+    },
+  },
+  test: {
+    solidity: {
+      isolate: true,
     },
   },
   networks: {
