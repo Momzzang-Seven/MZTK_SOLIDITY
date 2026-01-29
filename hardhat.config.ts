@@ -1,5 +1,7 @@
-import "@nomicfoundation/hardhat-toolbox-viem";
+import hardhatToolboxViemPlugin from "@nomicfoundation/hardhat-toolbox-viem";
 import { configVariable, defineConfig } from "hardhat/config";
+// import "@nomicfoundation/hardhat-toolbox-viem";
+// import { configVariable, defineConfig } from "hardhat/config";
 import { config as dotenvConfig } from "dotenv";
 import { fileURLToPath } from "url";
 import { dirname, resolve } from "path";
@@ -10,6 +12,7 @@ const __dirname = dirname(__filename);
 dotenvConfig({ path: resolve(__dirname, ".env") });
 
 export default defineConfig({
+  plugins: [hardhatToolboxViemPlugin],
   solidity: {
     profiles: {
       default: {

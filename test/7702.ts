@@ -15,7 +15,7 @@ import { sepolia } from "viem/chains";
 
 dotenv.config();
 
-describe("EIP-7702 Approve & Transfer Batch Test", function () {
+describe("EIP-7702 Approve & Transfer Batch Test", async function () {
   const PRIVATE_KEY = process.env.PRIVATE_KEY as `0x${string}`;
   const account = privateKeyToAccount(PRIVATE_KEY);
 
